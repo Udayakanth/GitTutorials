@@ -1,0 +1,80 @@
+* Git Learning
+** Basics
+    - First time install git-scm
+
+** Config
+    - git --version
+    - $ git --version
+      git version 2.9.2.windows.1
+    - SET CONFIG VALUES
+    - git config --global user.name "your name"
+    - git config --user.email "id@company.com"
+    - git config --list
+    - NEED HELP?
+    - git help <verb>
+    - git <verb> --help
+
+** Initialization
+    - git init
+    - git status // to get the current tracking info of the project You are
+      working
+    - touch .gitignore //creates .gitignore file
+    - .gitignore file contains file names which we dont want to track
+    - ex: config (personnel preference file) ( font, font size, debug files .DS_Store...)
+    - wild card entry is possible in .gitignore file, ex: *.txt, does not track
+      all text files in current working directory // note this is not recursive
+    - in .gitignore folder/abc/def.pdf, ignore def.pdf in folder/abc/
+    - You have to manually enter the folder with file name which You don't want
+      to track
+    - git status -s // argument -s shows status in one line
+      A  one.cpp
+
+** Work Flow
+    - 3 stages, 2 steps
+    - working directory to staging area to final revision
+      - step 1: working directory to staging area
+      - git add -A // adds from working dir to stage area
+      - if You want to remove files from staging area then enter command $ git reset
+      - $git reset fileName // its a reverse process of working to staging area, its
+        staging to working area
+      - step 2: staging area to final revision
+      - git commit -m " commit msg, what changes are made in this revision"
+
+** Woking On Remote Project 
+      - git clone <url> <where to clone>
+      - git clone https://link.to.repository.git . // . indicates current directory
+      - cloning can be done locally, from one folder to another folder
+      - git clone /folder/abc /folder/def
+      - git clone /folder/abc . // clone to current directory
+
+** Commiting changes to Remote repository
+      - git status; git add -A; git -m "changes"; then
+      - git pull repoNameInGitHub master
+      - pull is because any other developer changes made to the repository will
+        be included to Your project, so that every developer will be workin on
+        latest (recent) code
+      - master indicates we are pulling data from master branch
+      - git push repoNameInGitHub master
+      - master indicates we are commiting to master branch
+
+** Common Work Flow
+    - create a branch for desired feature
+    - git branch branchName //creates a branch
+    - git branch -a // to view all branches in project
+    - git checkout branchName //switches brach to given branch
+    - 
+
+http://coding4streetcred.com/blog/post/Configure-DiffMerge-for-Your-Git-DiffTool
+
+** Extras
+    - branching and merging info in text can be done by following command
+    - git log --graph --pretty=oneline --abbrev-commit
+    - git log --graph give detailed branching and merging with commit message
+    - 
+
+** Links
+    - http://www.gitguys.com/
+    - http://gitref.org/
+    - https://progit.org/
+    - Scott Chacon
+    - 
