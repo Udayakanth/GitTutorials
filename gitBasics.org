@@ -1,10 +1,22 @@
 * Git Learning
 ** Basics
     - First time install git-scm
+** Config
+    - git --version
+    - $ git --version
+      git version 2.9.2.windows.1
+    - SET CONFIG VALUES
+    - git config --global user.name "your name"
+    - git config --user.email "id@company.com"
+    - git config --list
+    - NEED HELP?
+    - git help <verb>
+    - git <verb> --help
+
+*** Create git in Your project
     - Two ways to use git in your project
     - initialize git in your project
     - clone the existing project
-*** Create git in Your project
 **** git init
      - To create a repository from existing directory of files, You can simply
        run $ git init
@@ -23,25 +35,32 @@
      - git clone will copy the entire history of that project so you have it
        locally
      - In a nutshell you use $git clone url; will give you git repository of
-       project in the given url
+       project in the given url  
 
-** Config
-    - git --version
-    - $ git --version
-      git version 2.9.2.windows.1
-    - SET CONFIG VALUES
-    - git config --global user.name "your name"
-    - git config --user.email "id@company.com"
-    - git config --list
-    - NEED HELP?
-    - git help <verb>
-    - git <verb> --help
+** Creating Snapshot
+    - 
+    - 
+*** git add
+    - To start tracking file the first step is to run $git add command
+    - this adds the file to the staging area
+    - the next step is commiting file from staging area
+    - You can't commit a file without adding it (to staging area)
+    - git add file1.txt file2.txt will add both the file to staging area
+    - git status -s 
+      A  file1.txt file2.txt
+    - argument -s shows status in one line
+    - A at the beginning indicates file1.txt and file2.txt added to staging area
+    - In a nutshell $git add is used to prepare a file for commit by staging it
+    
+*** git status 
+    - view the status of your files in the working directory and staging area
+    - it shows # Changes to be committed:
+    - and un tracked files (newly added files in current directory)
+    - this also tell you about files that were deleted since your last commit 
 
-** Initialization
-    - git init
-    - git status // to get the current tracking info of the project You are
-      working
-    - touch .gitignore //creates .gitignore file
+
+** Git Tips
+    - $touch .gitignore //creates .gitignore file
     - .gitignore file contains file names which we dont want to track
     - ex: config (personnel preference file) ( font, font size, debug files .DS_Store...)
     - wild card entry is possible in .gitignore file, ex: *.txt, does not track
@@ -49,8 +68,9 @@
     - in .gitignore folder/abc/def.pdf, ignore def.pdf in folder/abc/
     - You have to manually enter the folder with file name which You don't want
       to track
-    - git status -s // argument -s shows status in one line
-      A  one.cpp
+
+    - git status // to get the current tracking info of the project You are
+      working
 
 ** Work Flow
     - 3 stages, 2 steps
