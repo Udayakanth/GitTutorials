@@ -1,6 +1,8 @@
 * Git Learning
 ** Basics
     - First time install git-scm
+    - download link https://git-scm.com/download/win 
+
 ** Config
     - git --version
     - $ git --version
