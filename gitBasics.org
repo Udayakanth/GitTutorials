@@ -51,16 +51,65 @@
     - You can't commit a file without adding it (to staging area)
     - git add file1.txt file2.txt will add both the file to staging area
     - git status -s 
-      A  file1.txt file2.txt
-    - argument -s shows status in one line
+      A  file1.txt file2.txt // note A at the beginnig of this line
+    - argument -s shows status in few line
     - A at the beginning indicates file1.txt and file2.txt added to staging area
     - In a nutshell $git add is used to prepare a file for commit by staging it
+    - git -u //adds files which were modified and already added
     
 *** git status 
     - view the status of your files in the working directory and staging area
     - it shows # Changes to be committed:
     - and un tracked files (newly added files in current directory)
-    - this also tell you about files that were deleted since your last commit 
+    - this also tell you about files that were deleted since your last commit
+    - git status -s shows compact version of current status of working directory
+
+*** git diff 
+    - 3 types of git diff are there
+    - git diff // shows difference between untracked files vs staged files
+    - git diff --cached //diff between staged files vs last commit files
+    - git diff HEAD //untracked vs last commited files
+    - shows diff of what is staged and what is modified but unstaged
+    - git diff --stat is very useful, it outputs the files changed in untracked
+      vs staged
+    - git diff --cached --stat //it outputs file changed stats in staged vs
+      last commit
+    - git diff HEAD --stat // it outputs file changed stats in untracked vs
+      last commit
+    - ex: git diff --stat   //results in below output
+          file1.txt | 2 ++  //2 changes both are addition
+          file2.txt | 3 ++- //3 changes 2 addition(++) and 1(-) deletion
+    - You can also provide a file path at the end of any of these options to
+      limit the diff output to a specific file or subdirectory.
+    - In a nutshell, you run git diff to see details of the git status command -
+      how files have been modified or staged on a line by line basis
+
+*** git commit
+    - $git commit records a snapshot of the staging area
+    - Git records your name and email address with every commit you make
+    - git commit -a automatically stage all tracked, modified files before the
+      commit
+    - note -a only commits tracked files( earlier added files) not untracked
+      files (new files)
+    - git commit -m "your message" ,commits with given message
+    - note: git commit -am "your commit message" stages tracked files and commits
+    - In a nutshell, you run git commit to record the snapshot of your staged
+      content, This snapshot can then be compared, shared and reverted to if you
+      need to
+
+*** git reset 
+    - undo changes and commits
+    - git reset HEAD unstage files from index and reset pointer to HEAD
+    - when its needed?
+    - if you accidentally staged files for commit which you don't want to
+      commit then you can use git reset HEAD -- filename
+    - git add u1.txt u2.txt then
+    - git reset HEAD -- u1.txt //will unstage u1.txt (the file changes will be preserved)
+    - git reset HEAD -- filename // will not reset the file contents, it just
+      unstages it
+    - When you run git reset without specifying a flag it defaults to --mixed
+    - git reset --hard hashcode will go to the specified commit but but it
+      keeps the untracked files as it, it does not delete untracked files
 
 
 ** Git Tips
@@ -75,6 +124,8 @@
 
     - git status // to get the current tracking info of the project You are
       working
+
+    - git clean -df // removes untracked directory and files
 
 ** Work Flow
     - 3 stages, 2 steps
@@ -124,4 +175,4 @@ http://coding4streetcred.com/blog/post/Configure-DiffMerge-for-Your-Git-DiffTool
     - http://gitref.org/
     - https://progit.org/
     - Scott Chacon
-    - 
+    - https://www.atlassian.com/git/
