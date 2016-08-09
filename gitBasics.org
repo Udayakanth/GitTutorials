@@ -18,26 +18,28 @@
 *** Create git in Your project
     - Two ways to use git in your project
     - initialize git in your project
-    - clone the existing project
+    - or clone the existing project
+
 **** git init
-     - To create a repository from existing directory of files, You can simply
+     - To create a repository from existing directory, You can simply
        run $ git init
      - ex: current folder name is project1 then $cd project1; git init
      - in terminal you will see, Initialized empty Git repository in /project1/.git
      - git init, creates .git sub-folder here it store all the data of your
        project snapshots are stored
-     - In a nutshell, you use git init to make an existing directory of the
-       content into a new Git repository
+     - In a nutshell, you use git init to make an existing directory 
+       into a new Git repository
      - You can do this in any directory at any time completely locally
+
 **** git clone
      - if you need to collaborate with someone on project, or copy a public
-       project in github, you need to clone the existing project
-     - run git clone url command, with URL of the project you want to copy
+       project from github, you need to clone the existing project
+     - run $git clone url command, with URL of the project you want to copy
      - git clone git://github.com/schacon/simplegit.git
      - git clone will copy the entire history of that project so you have it
        locally
      - In a nutshell you use $git clone url; will give you git repository of
-       project in the given url  
+       project in the given url to Your current working directory
 
 ** Creating Snapshot
     - 
