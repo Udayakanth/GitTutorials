@@ -55,7 +55,7 @@
     - argument -s shows status in few line
     - A at the beginning indicates file1.txt and file2.txt added to staging area
     - In a nutshell $git add is used to prepare a file for commit by staging it
-    - git -u //adds files which were modified and already added
+    - git add -u //adds files which were modified and already added
     
 *** git status 
     - view the status of your files in the working directory and staging area
@@ -162,8 +162,6 @@
     - git checkout branchName //switches brach to given branch
     - 
 
-http://coding4streetcred.com/blog/post/Configure-DiffMerge-for-Your-Git-DiffTool
-
 ** Extras
     - branching and merging info in text can be done by following command
     - git log --graph --pretty=oneline --abbrev-commit
@@ -176,3 +174,4 @@ http://coding4streetcred.com/blog/post/Configure-DiffMerge-for-Your-Git-DiffTool
     - https://progit.org/
     - Scott Chacon
     - https://www.atlassian.com/git/
+    - http://coding4streetcred.com/blog/post/Configure-DiffMerge-for-Your-Git-DiffTool
