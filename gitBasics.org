@@ -9,7 +9,7 @@
       git version 2.9.2.windows.1
     - SET CONFIG VALUES
     - git config --global user.name "your name"
-    - git config --user.email "id@company.com"
+    - git config --global user.email "id@company.com"
     - git config --list
     - NEED HELP?
     - git help <verb>
